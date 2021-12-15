@@ -1,0 +1,24 @@
+// Дана строка, содержащая русскоязычный текст. Найти количество слов, начинающихся с буквы "о".
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int k = 0;
+            Console.Write("Введите строку: ");
+            string str = Console.ReadLine();
+            if (str[0] == 'о')
+                k++;
+            for (int i = 1; i < str.Length; i++)
+            {
+                if (str[i] == 'о' && str[i - 1] == ' ')
+                    k++;
+            }
+            Console.WriteLine("Количество слов начинающихся на о: " + k);
+            Console.ReadKey();
+        }
+    }
+}
