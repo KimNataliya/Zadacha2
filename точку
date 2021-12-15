@@ -1,0 +1,34 @@
+//В строке удалить символ точку (.) и подсчитать количество удаленных символов.
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int k = 0;
+            Console.Write("Введите строку: ");
+            string str = Console.ReadLine();
+            string str1 = "";
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] == '.')
+                {
+                    str1 += str[i + 1];
+                    i++;
+                    k++;
+                }
+
+                else str1 += str[i];
+
+            }
+            Console.WriteLine("Количество: " + k);
+            Console.WriteLine("Строка: ");
+            for (int i = 0; i < str.Length; i++)
+                Console.Write(str1[i]);
+            Console.ReadKey();
+        }
+    }
+}
