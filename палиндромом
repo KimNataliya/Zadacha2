@@ -1,0 +1,24 @@
+// Проверить является введенный пользователем палиндромом или нет. Пробелы и регистр символов в строке игнорировать.
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Введите строку с маленькой буквой");
+            string str = Console.ReadLine(); 
+            string reverses = ""; 
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                reverses += str[i]; 
+            }
+            if (str == reverses)
+                Console.WriteLine("Введенная строка является палиндромом.");
+            else
+                Console.WriteLine("Введенная строка не является палиндромом.");
+            Console.ReadKey();
+        }
+    }
+}
