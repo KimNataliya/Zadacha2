@@ -1,0 +1,20 @@
+//Задан массив из n целых чисел. Вывести только его положительные элементы, не меняя первоначальный порядок. 
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var n = Convert.ToInt32(Console.ReadLine());
+            var a = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+            for (int i = 0; i < n; i++)
+            {
+                if (a[i] > 0)
+                    Console.WriteLine(a[i]);
+            }
+             
+        } 
+    }
+}
