@@ -1,0 +1,22 @@
+//Дан массив из n целых чисел. Определите, сколько в нем элементов, больших двух своих соседей, и выведите количество таких элементов. Крайние элементы списка не учитывать, поскольку у них мало соседей.
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var n = Convert.ToInt32(Console.ReadLine());
+            var a = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+            int k = 0;
+            for (int i = 1; i < n-1; i++)
+            {
+                if ((a[i - 1] < a[i]) && (a[i + 1] < a[i]))
+                    k++;
+            }
+            Console.WriteLine(k);
+
+        }
+    }
+}
