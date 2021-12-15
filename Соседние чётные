@@ -1,0 +1,21 @@
+//Задана последовательность целых чисел. Подсчитать количество элементов, у которых четные соседи.
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var n = Convert.ToInt32(Console.ReadLine());
+            var a = Array.ConvertAll(Console.ReadLine().Split(' '), s => int.Parse(s));
+            int k = 0;
+            for (int i = 1; i < n-1; i++)
+            {
+                if ((a[i - 1] % 2 == 0) && (a[i + 1] % 2 == 0))
+                    k++;
+            }
+             Console.WriteLine(k);
+        } 
+    }
+}
