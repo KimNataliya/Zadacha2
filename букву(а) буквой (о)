@@ -1,0 +1,29 @@
+//В строке заменить букву(а) буквой (о). Подсчитать количество замен. Подсчитать, сколько символов в строке.
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int k = 0; 
+            int n = 0;
+            Console.Write("Введите строку: ");
+            string str = Console.ReadLine();
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] == 'а')
+                    k++;
+                if (str[i] == ' ')
+                    n++;
+            }
+            Console.WriteLine("Количество символов:" + (str.Length - n));
+            Console.WriteLine("Количество замен: " + k);
+            Console.WriteLine("Строка: ");
+            Console.WriteLine(str.Replace("а", "о"));
+            Console.ReadKey();
+        }
+    }
+}
