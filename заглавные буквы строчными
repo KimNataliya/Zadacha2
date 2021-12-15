@@ -1,0 +1,15 @@
+//В строке заменить все заглавные буквы строчными.
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string s = Console.ReadLine();
+            Console.Write(s.ToLower());
+            Console.ReadKey();
+        }
+    }
+}
