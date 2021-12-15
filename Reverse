@@ -1,0 +1,22 @@
+namespace massiv
+{
+    class Program
+    {
+        static string Reverse(string str)
+        {
+            var a = string.Empty;
+            foreach(var symbol in str)
+            {
+                a = symbol + a;
+            }
+            return a;
+        }
+        static void Main(string[] args)
+        {
+            Console.Write("Введите строку: ");
+            var s = Console.ReadLine();
+            Console.WriteLine($"Реерс строки:{Reverse(s)}");
+            Console.WriteLine();
+        }
+    }
+}
