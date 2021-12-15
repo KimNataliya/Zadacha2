@@ -1,3 +1,6 @@
+//Написать программу для получения реверсированной строки.
+using System;
+
 namespace massiv
 {
     class Program
