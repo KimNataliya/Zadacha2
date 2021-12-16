@@ -1,0 +1,23 @@
+//Дана строка, заканчивающаяся точкой. Подсчитать, сколько слов в строке.
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите строку, заканчивающаяся точкой");
+            string str = Console.ReadLine();
+            int k = 0;
+            for (int i=1; i <= str.Length; i++)
+            {
+                if (str[i-1]==' ' && str[i]!=' ')
+                {
+                    k++;
+                }
+            }
+            Console.WriteLine(k+1);
+        }
+    }
+}
