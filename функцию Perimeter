@@ -1,0 +1,27 @@
+//Выполнить: Необходимо переделать предыдущую задачу, теперь функция периметр должна возвращать целое значение. Напомним задание: Вводятся три числа — длины трех сторон треугольника. Создайте функцию Perimeter(), которая вычисляет периметр треугольника по длинам трех его сторон.
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void Perimeter(int a, int b, int c)
+        {
+            int s = a + b + c;
+            Console.WriteLine(s);
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите три числа");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c = Convert.ToInt32(Console.ReadLine());
+            if(a>0 && b>0 && c>0)
+            {
+                Perimeter(a,b,c);
+            }
+            else Console.WriteLine("Такого треугольника не существует");
+
+        }
+    }
+}
