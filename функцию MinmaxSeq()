@@ -1,0 +1,34 @@
+// Создайте функцию MinmaxSeq()
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void MinmaxSeq(ref int max, ref int min)
+        {
+            Console.WriteLine("ввести последовательность, которая должна закончиться 0");
+            int a;
+            do
+            {
+                a = Int32.Parse(Console.ReadLine());
+                if (a>max && a!=0)
+                {
+                    max = a;
+                }
+                if (a<min && a!=0)
+                {
+                    min = a;
+                }
+            }
+            while (a != 0);
+        }
+        static void Main(string[] args)
+        {
+            int max = int.MinValue;
+            int min = int.MaxValue;
+            MinmaxSeq(ref max, ref min);
+            Console.WriteLine($"минимальное: {min}, максимальное: {max}");
+        }
+    }
+}
