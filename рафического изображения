@@ -1,0 +1,27 @@
+// Составить программу для графического изображения делимости чисел от 1 до n (значение n вводится с клавиатуры). В каждой строке надо напечатать очередное число и столько символов «+», сколько делителей у этого числа. Например, если n = 4, то на экране должно быть напечатано:
+
+using System;
+
+namespace massiv
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
+            int k = 0;
+            for (int i=1; i <= n; i++)
+            {
+                Console.Write($"{i}");
+                for (int j=1; j<=i; j++)
+                {
+                    if (i%j==0)
+                    {
+                        Console.Write("*");
+                    }
+                }
+                Console.WriteLine(" ");
+            }
+        }
+    }
+}
